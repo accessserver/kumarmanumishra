@@ -1,0 +1,494 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MISHRA & ASSOCIATES | Advocate & Tax Consultant</title>
+
+    <meta name="description"
+        content="MISHRA & ASSOCIATES - Professional Tax, GST, Income Tax and Legal Consultancy. Kumar Manu Mishra, Advocate.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f8fa;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            padding: 70px 7%;
+            background: linear-gradient(135deg, #111827, #263449);
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 7vw, 72px);
+            line-height: 1.1;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .gold {
+            color: #d4af37;
+        }
+
+        .hero h2 {
+            font-size: 27px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            font-size: 18px;
+            color: #d9dee7;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #d4af37;
+            color: #111827;
+        }
+
+        .btn-primary:hover {
+            background: #f0cc55;
+        }
+
+        .btn-outline {
+            border: 1px solid #d4af37;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: #d4af37;
+            color: #111827;
+        }
+
+        section {
+            padding: 80px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .service-card h3 {
+            color: #111827;
+            margin-bottom: 12px;
+            font-size: 21px;
+        }
+
+        .service-card p {
+            color: #666;
+        }
+
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-content h2 {
+            font-size: 36px;
+            color: #111827;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            color: #555;
+            font-size: 17px;
+        }
+
+        .values {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .value {
+            background: #f7f8fa;
+            padding: 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #111827;
+        }
+
+        .contact {
+            background: #111827;
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            color: #d9dee7;
+            margin-bottom: 25px;
+        }
+
+        footer {
+            background: #080d16;
+            color: #aaa;
+            text-align: center;
+            padding: 22px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+            .services {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .values {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 13px;
+            }
+
+            .hero {
+                min-height: 600px;
+                padding: 55px 6%;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+
+            .services,
+            .values {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">MISHRA & ASSOCIATES</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            MISHRA <span class="gold">&</span> ASSOCIATES
+        </h1>
+
+        <h2>
+            Kumar Manu Mishra, Advocate
+        </h2>
+
+        <p>
+            Advocates | Tax & Legal Consultants
+        </p>
+
+        <p>
+            Professional assistance in Income Tax, GST, Taxation,
+            Legal Consultancy and Business Compliance.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#services" class="btn btn-primary">
+                Our Services
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+    <div class="section-title">
+
+        <h2>Our Services</h2>
+
+        <p>
+            Professional Tax & Legal Services
+        </p>
+
+    </div>
+
+
+    <div class="services">
+
+        <div class="service-card">
+            <h3>Income Tax</h3>
+
+            <p>
+                Income Tax Return filing, tax consultancy,
+                assessments, notices, appeals and related matters.
+            </p>
+        </div>
+
+
+        <div class="service-card">
+            <h3>GST</h3>
+
+            <p>
+                GST registration, returns, compliance,
+                notices, assessments, appeals and litigation.
+            </p>
+        </div>
+
+
+        <div class="service-card">
+            <h3>Taxation Consultancy</h3>
+
+            <p>
+                Professional taxation advice, tax planning
+                and practical solutions for individuals and businesses.
+            </p>
+        </div>
+
+
+        <div class="service-card">
+            <h3>Legal Consultancy</h3>
+
+            <p>
+                Legal consultation, representation and
+                professional assistance in taxation-related legal matters.
+            </p>
+        </div>
+
+
+        <div class="service-card">
+            <h3>Tax Litigation</h3>
+
+            <p>
+                Assistance in GST and Income Tax proceedings,
+                appeals and other taxation disputes.
+            </p>
+        </div>
+
+
+        <div class="service-card">
+            <h3>Business Compliance</h3>
+
+            <p>
+                TDS, statutory compliance and other
+                tax-related business requirements.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="about-content">
+
+        <h2>About MISHRA & ASSOCIATES</h2>
+
+        <p>
+            MISHRA & ASSOCIATES provides professional assistance
+            in taxation and legal matters with a focus on practical
+            advice, compliance and effective representation.
+        </p>
+
+        <p style="margin-top:15px;">
+            <strong>Kumar Manu Mishra, Advocate</strong>
+            is engaged in professional practice with a focus on
+            taxation, GST, Income Tax and related legal consultancy.
+        </p>
+
+
+        <div class="values">
+
+            <div class="value">
+                Professional Approach
+            </div>
+
+            <div class="value">
+                Confidentiality
+            </div>
+
+            <div class="value">
+                Practical Advice
+            </div>
+
+            <div class="value">
+                Timely Compliance
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2>Need Professional Assistance?</h2>
+
+    <p>
+        Contact MISHRA & ASSOCIATES for Tax & Legal Consultancy.
+    </p>
+
+    <a href="mailto:your-email@example.com"
+       class="btn btn-primary">
+        Contact Us
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 MISHRA & ASSOCIATES.
+    All Rights Reserved.
+
+</footer>
+
+</body>
+</html>
+```
